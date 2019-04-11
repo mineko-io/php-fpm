@@ -14,5 +14,6 @@ RUN NPROC=$(getconf _NPROCESSORS_ONLN) && \
      --with-freetype --with-jpeg && \
     docker-php-ext-install -j${NPROC} gd 
 RUN pecl install imagick && docker-php-ext-enable imagick && pecl install apcu
+RUN pecl install xdebug && docker-php-ext-enable xdebug
 RUN apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev curl-dev libedit-dev libxml2-dev icu-dev libsodium-dev gd-dev libwebp-dev zlib-dev libxpm-dev jpeg-dev libzip-dev imagemagick-dev krb5-dev
 COPY php.ini /usr/local/etc/php/
