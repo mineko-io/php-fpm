@@ -1,5 +1,5 @@
 # php-fpm docker image
-Custom php-fpm docker image based on latest php version 7.2
+Custom php-fpm docker image based on latest php version 7.3
 
 ## Enabled php extensions:
 * iconv 
@@ -19,6 +19,7 @@ Custom php-fpm docker image based on latest php version 7.2
 * calendar
 * mysqli
 * sodium
+* apcu
 
 ## Build
 ```bash
